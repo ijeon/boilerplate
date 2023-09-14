@@ -1,0 +1,46 @@
+/* fonts */
+@font-face { font-family: nanumsquare; src: url(../ref/NanumSquareL.otf) format('opentype'), url(../ref/NanumSquareL.ttf) format('truetype'); font-weight: 200; }
+@font-face { font-family: nanumsquare; src: url(../ref/NanumSquareR.otf) format('opentype'), url(../ref/NanumSquareR.ttf) format('truetype'); font-weight: 400; }
+@font-face { font-family: nanumsquare; src: url(../ref/NanumSquareB.otf) format('opentype'), url(../ref/NanumSquareB.ttf) format('truetype'); font-weight: 600; }
+
+/* the new css reset v1.9 by elad2412 */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) { all: unset; display: revert; }
+*, *::before, *::after { box-sizing: border-box; }
+a, button { cursor: revert; }
+ol, ul, menu { list-style: none; }
+img { max-inline-size: 100%; max-block-size: 100%; }
+table { border-collapse: collapse; }
+input, textarea { -webkit-user-select: auto; }
+textarea { white-space: revert; }
+meter { -webkit-appearance: revert; appearance: revert; }
+:where(pre) { all: revert; }
+::placeholder { color: unset; }
+::marker { content: initial; }
+:where([hidden]) { display: none; }
+:where([contenteditable]:not([contenteditable="false"])) { -moz-user-modify: read-write; -webkit-user-modify: read-write; overflow-wrap: break-word; -webkit-line-break: after-white-space; -webkit-user-select: auto; }
+:where([draggable="true"]) { -webkit-user-drag: element; }
+:where(dialog:modal) { all: revert; }
+
+/* additional reset */
+*, *::before, *::after { font: inherit; }
+a, button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
+
+/* variables */
+:root {
+    --default-font-weight: 400;
+    --default-font-size: 16px/1;
+    --default-font-family: nanumsquare, sans-serif;
+    --color-black: #222;
+    --color-black-20: rgba(0, 0, 0, .2);
+    --color-gray: #aaa;
+    --wrap-width: 1200px;
+}
+
+/* default */
+:root { font: var(--default-font-weight) var(--default-font-size) var(--default-font-family); color: var(--color-black); }
+
+/* common */
+wrap { display: block; margin: 0 auto; max-width: var(--wrap-width); }
+flex { display: flex; }
+
+/* layout */
